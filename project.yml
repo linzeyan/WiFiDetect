@@ -96,6 +96,7 @@ targetTemplates:
       path: App/Info.plist
       properties:
         # Without these xcodegen writes 1.0 (1), whatever `make release` tags the build.
+        # The iPhone and iPad app has the same two.
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         # macOS 14+ redacts SSID/BSSID unless the app holds Location authorization;
@@ -156,9 +157,10 @@ targets:
       properties:
         CFBundlePackageType: SYSX
         # macOS replaces an installed extension only when a version differs, so `make
-        # dist` stamps each build's (CURRENT_PROJECT_VERSION) with the time.
+        # dist` stamps each build's with the time (EXTENSION_BUILD). The apps keep
+        # CURRENT_PROJECT_VERSION, which their About panel and the App Store show.
         CFBundleShortVersionString: $(MARKETING_VERSION)
-        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleVersion: $(EXTENSION_BUILD)
         NSSystemExtensionUsageDescription: WiFiDetect's network extension names the app behind each connection, and sends the HTTPS of apps you choose to WiFiDetect's proxy. It never blocks anything.
         NetworkExtension:
           # Under the app group below, as Network Extension requires.
@@ -180,6 +182,7 @@ targets:
         # macOS finds a system extension by its bundle's name, which must be its identifier.
         PRODUCT_NAME: com.zeyanlin.wifidetect.extension
         PRODUCT_MODULE_NAME: WiFiDetectExtension
+        EXTENSION_BUILD: $(CURRENT_PROJECT_VERSION)
         SKIP_INSTALL: YES
 
   # Root launchd daemon, installed by the app through SMAppService. It does only
@@ -223,9 +226,9 @@ targets:
       path: iOS/Info.plist
       properties:
         CFBundleDisplayName: WiFiDetect
-        # The App Store version, apart from MARKETING_VERSION, which numbers the Mac app's
-        # GitHub releases.
-        CFBundleShortVersionString: "1.0.0"
+        # The Mac app's version and build: the two apps are released as one.
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         UILaunchScreen: {}
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
         # All four, or iPadOS won't run the app in Split View and Stage Manager.

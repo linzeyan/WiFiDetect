@@ -30,7 +30,7 @@ echo "== archive (extension version $STAMP)"
 xcodebuild -project WiFiDetect.xcodeproj -scheme WiFiDetectDist -configuration Release \
     -derivedDataPath build/dist-derived -destination 'generic/platform=macOS' \
     -archivePath "$OUT/WiFiDetect.xcarchive" \
-    CODE_SIGNING_ALLOWED=NO TeamIdentifierPrefix="$TEAM." CURRENT_PROJECT_VERSION="$STAMP" archive || fail "archive failed"
+    CODE_SIGNING_ALLOWED=NO TeamIdentifierPrefix="$TEAM." EXTENSION_BUILD="$STAMP" archive || fail "archive failed"
 
 ARCHIVED="$OUT/WiFiDetect.xcarchive/Products/Applications/WiFiDetect.app"
 expand() { sed "s/\$(TeamIdentifierPrefix)/$TEAM./g" "$1" >"$2"; }
