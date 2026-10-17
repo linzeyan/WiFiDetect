@@ -86,6 +86,15 @@ For apps that ignore the system proxy, turn on Settings › Proxy › Capture ap
 
 Anyone on the network can read what the Mac shares: signal, noise, channel and transmit rate, never the network's name.
 
+## Uninstall the Mac app
+
+1. If you installed the helper: Settings › Helper › Uninstall.
+2. If you turned on the content filter or app capture: click Remove Network Extension… in Settings › Traffic, and restart the Mac if the status asks you to. Moving the app to the Trash alone leaves the extension installed.
+3. If you created the certificate authority: Settings › Proxy › Remove….
+4. Move WiFiDetect to the Trash.
+
+If it's already in the Trash and the extension is still there: in System Settings › General › Login Items & Extensions › Network Extensions, click ⋯ next to WiFiDetect, choose Delete Extension, and restart the Mac.
+
 ## Privacy
 
 WiFiDetect collects nothing: no accounts, analytics or ads, and everything stays on your devices and your network. See [PRIVACY.md](PRIVACY.md).

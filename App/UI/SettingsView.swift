@@ -150,6 +150,7 @@ private struct TrafficSettingsView: View {
 /// (architecture §3, Network extension).
 private struct AttributionSettings: View {
     @Environment(NetworkExtensionClient.self) private var network
+    @State private var isConfirmingRemoval = false
 
     var body: some View {
         let included = network.status != .notIncluded
@@ -157,11 +158,19 @@ private struct AttributionSettings: View {
             Toggle("Name apps with a content filter", isOn: Binding { network.isFilterOn } set: { on in
                 Task { await network.setFilter(on) }
             })
-            .disabled(!included)
+            .disabled(!included || network.status == .removing)
             if included {
                 LabeledContent("Network extension", value: network.status.label)
                 if network.status == .needsApproval {
                     Button("Open System Settings") { SMAppService.openSystemSettingsLoginItems() }
+                }
+                if network.status == .installed {
+                    Button("Remove Network Extension…", role: .destructive) { isConfirmingRemoval = true }
+                        .confirmationDialog("Remove WiFiDetect's network extension?", isPresented: $isConfirmingRemoval) {
+                            Button("Remove", role: .destructive) { Task { await network.uninstall() } }
+                        } message: {
+                            Text("Connections are named from the socket table alone, apps that ignore the system proxy are no longer captured, and macOS uninstalls the extension. Do this before you move WiFiDetect to the Trash: the Trash alone leaves the extension installed. Turning either on again installs it again.")
+                        }
                 }
             }
             if let error = network.error {

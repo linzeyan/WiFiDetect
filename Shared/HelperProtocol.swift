@@ -54,9 +54,11 @@ struct SocketOwner: Codable, Equatable, Sendable {
     var pid: Int32
     var name: String
     var path: String
-    /// The process that opened the socket, when it's a system daemon acting for this
-    /// one, as nsurlsessiond does for background downloads. Only the content filter
-    /// tells; libproc sees the daemon alone.
+    /// The process that opened the socket, when it's a system daemon or an XPC service
+    /// acting for this one, as nsurlsessiond does for background downloads and
+    /// com.apple.WebKit.Networking for Safari. Never the helper's: libproc sees the
+    /// daemon or service alone. The content filter tells of a daemon, and the app looks
+    /// up a service's app.
     var via: String? = nil
 }
 

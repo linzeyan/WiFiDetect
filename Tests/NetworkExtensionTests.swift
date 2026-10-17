@@ -265,4 +265,56 @@ struct FlowAttributionTests {
         attribution.record([report])
         #expect(attribution.owner(of: flow())?.via == "nsurlsessiond (pid 9)")
     }
+
+    // The content filter names a service by its bundle, libproc by the program in it.
+    let webKit = "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc"
+    let safari = FlowReport.Process(pid: 3, path: "/Applications/Safari.app")
+
+    /// Safari's pages load through WebKit's networking service, whose sockets are its
+    /// own; named after the service, every page would be "com.apple.WebKit.Networking".
+    @Test func xpcServiceIsShownAsItsApp() {
+        var attribution = FlowAttribution()
+        attribution.responsible = { $0 == 7 ? safari : nil }
+        attribution.record([report(path: webKit)])
+        let filter = attribution.owner(of: flow(), libproc: nil)
+        #expect(filter?.name == "Safari")
+        #expect(filter?.pid == 3)
+        #expect(filter?.via == "com.apple.WebKit.Networking (pid 7)")
+
+        let service = SocketOwner(proto: 6, localPort: 52001, pid: 7, name: "com.apple.WebKit.Networking", path: webKit + "/Contents/MacOS/com.apple.WebKit.Networking")
+        let libproc = attribution.owner(of: flow(port: 52001), libproc: service)
+        #expect(libproc == SocketOwner(proto: 6, localPort: 52001, pid: 3, name: "Safari", path: "/Applications/Safari.app", via: "com.apple.WebKit.Networking (pid 7)"))
+    }
+
+    /// The system holds a terminal responsible for what's run in it, and a daemon for
+    /// itself; only an XPC service is shown as another process.
+    @Test func onlyXPCServicesAreShownAsAnotherProcess() {
+        var attribution = FlowAttribution()
+        attribution.responsible = { _ in FlowReport.Process(pid: 4, path: "/System/Applications/Utilities/Terminal.app") }
+        attribution.record([report(path: "/usr/bin/curl")])
+        #expect(attribution.owner(of: flow())?.name == "curl")
+        #expect(attribution.owner(of: flow(port: 52001), libproc: libproc) == libproc)
+    }
+
+    /// A service launched for no app is responsible for itself, or for launchd.
+    @Test func serviceWithoutAnAppKeepsItsName() {
+        for host: pid_t in [7, 1] {
+            var attribution = FlowAttribution()
+            attribution.responsible = { _ in FlowReport.Process(pid: host, path: "/sbin/launchd") }
+            attribution.record([report(path: webKit)])
+            #expect(attribution.owner(of: flow())?.name == "com.apple.WebKit.Networking")
+            #expect(attribution.owner(of: flow())?.via == nil)
+        }
+    }
+}
+
+struct ResponsibleProcessTests {
+    /// The call is private, and a macOS release could drop or change it; every Safari
+    /// connection would quietly go back to being named after WebKit's service.
+    @Test func privateCallAnswers() throws {
+        let process = try #require(ResponsibleProcess.responsible(for: getpid()))
+        #expect(process.pid > 0)
+        #expect(!process.path.isEmpty)
+        #expect(!process.path.contains(".app/Contents/MacOS/"))
+    }
 }

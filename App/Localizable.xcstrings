@@ -1197,6 +1197,16 @@
         }
       }
     },
+    "Connections are named from the socket table alone, apps that ignore the system proxy are no longer captured, and macOS uninstalls the extension. Do this before you move WiFiDetect to the Trash: the Trash alone leaves the extension installed. Turning either on again installs it again." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "連線改為只依 socket 表辨識，也不再擷取不使用系統代理伺服器的 App，macOS 會解除安裝延伸功能。請在把 WiFiDetect 丟到垃圾桶之前先做這一步：只丟垃圾桶的話，延伸功能還會留在 Mac 上。再次開啟其中任一項，就會重新安裝。"
+          }
+        }
+      }
+    },
     "Connections idle for 10 minutes are removed." : {
       "localizations" : {
         "zh-Hant" : {
@@ -3277,6 +3287,26 @@
         }
       }
     },
+    "Remove Network Extension…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "移除網路延伸功能⋯"
+          }
+        }
+      }
+    },
+    "Remove WiFiDetect's network extension?" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "要移除 WiFiDetect 的網路延伸功能嗎？"
+          }
+        }
+      }
+    },
     "Remove from Favorites" : {
       "localizations" : {
         "zh-Hant" : {
@@ -3293,6 +3323,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "移除⋯"
+          }
+        }
+      }
+    },
+    "Removing…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在移除⋯"
           }
         }
       }
@@ -3463,6 +3503,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "重新啟動 Mac 以完成安裝"
+          }
+        }
+      }
+    },
+    "Restart the Mac to finish removing it" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新啟動 Mac 以完成移除"
           }
         }
       }

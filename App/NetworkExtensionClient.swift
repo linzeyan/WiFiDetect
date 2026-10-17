@@ -23,6 +23,8 @@ final class NetworkExtensionClient: NSObject {
         case needsApproval
         case needsRestart
         case installed
+        case removing
+        case removalNeedsRestart
         case failed(String)
     }
 
@@ -43,6 +45,7 @@ final class NetworkExtensionClient: NSObject {
     @ObservationIgnored private var heartbeat: Task<Void, Never>?
     @ObservationIgnored private var proxyManager: NETransparentProxyManager?
     @ObservationIgnored private var activation: (request: OSSystemExtensionRequest, done: CheckedContinuation<Bool, Never>)?
+    @ObservationIgnored private var deactivation: OSSystemExtensionRequest?
     @ObservationIgnored private var properties: OSSystemExtensionRequest?
     @ObservationIgnored private lazy var receiver = ReportReceiver { [weak self] reports in
         Task { @MainActor in self?.onReports(reports) }
@@ -176,6 +179,40 @@ final class NetworkExtensionClient: NSObject {
         log.notice("extension: \(String(describing: status), privacy: .public)")
     }
 
+    // MARK: Removing
+
+    /// Takes the extension off the Mac, its configurations first. Moving the app to the
+    /// Trash doesn't: macOS 26 kept the trashed app's extension installed and running
+    /// (docs/README.md D14).
+    func uninstall() async {
+        guard Self.isIncluded, activation == nil, deactivation == nil else { return }
+        error = nil
+        status = .removing
+        await stopCapture()
+        do {
+            let filter = NEFilterManager.shared()
+            try await filter.loadFromPreferences()
+            if filter.providerConfiguration != nil {
+                try await filter.removeFromPreferences()
+            }
+            for manager in try await NETransparentProxyManager.loadAllFromPreferences() {
+                try await manager.removeFromPreferences()
+            }
+        } catch {
+            // The extension stays, so Remove can be tried again.
+            self.error = error.localizedDescription
+            status = .installed
+            return
+        }
+        proxyManager = nil
+        isFilterOn = false
+        updateHeartbeat()
+        let request = OSSystemExtensionRequest.deactivationRequest(forExtensionWithIdentifier: ExtensionConstants.identifier, queue: .main)
+        request.delegate = self
+        deactivation = request
+        OSSystemExtensionManager.shared.submitRequest(request)
+    }
+
     private nonisolated static func describe(_ error: Error) -> String {
         switch (error as? OSSystemExtensionError)?.code {
         case .unsupportedParentBundleLocation:
@@ -257,8 +294,13 @@ extension NetworkExtensionClient: OSSystemExtensionRequestDelegate {
 
     nonisolated func request(_ request: OSSystemExtensionRequest, didFinishWithResult result: OSSystemExtensionRequest.Result) {
         MainActor.assumeIsolated {
-            guard request === activation?.request else { return }
-            finishActivation(result == .willCompleteAfterReboot ? .needsRestart : .installed)
+            if request === activation?.request {
+                finishActivation(result == .willCompleteAfterReboot ? .needsRestart : .installed)
+            } else if request === deactivation {
+                deactivation = nil
+                status = result == .willCompleteAfterReboot ? .removalNeedsRestart : .notInstalled
+                log.notice("extension: \(String(describing: self.status), privacy: .public)")
+            }
         }
     }
 
@@ -269,6 +311,10 @@ extension NetworkExtensionClient: OSSystemExtensionRequestDelegate {
                 status = .failed(message)
             } else if request === activation?.request {
                 finishActivation(.failed(message))
+            } else if request === deactivation {
+                deactivation = nil
+                self.error = message
+                status = .installed
             }
         }
     }

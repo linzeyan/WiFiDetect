@@ -273,6 +273,8 @@ extension NetworkExtensionClient.Status {
         case .needsApproval: String(localized: "Waiting for you to allow it in System Settings › General › Login Items & Extensions › Network Extensions")
         case .needsRestart: String(localized: "Restart the Mac to finish installing it")
         case .installed: String(localized: "Installed")
+        case .removing: String(localized: "Removing…")
+        case .removalNeedsRestart: String(localized: "Restart the Mac to finish removing it")
         case .failed(let message): message
         }
     }
