@@ -266,7 +266,6 @@ struct FlowAttributionTests {
         #expect(attribution.owner(of: flow())?.via == "nsurlsessiond (pid 9)")
     }
 
-    // The content filter names a service by its bundle, libproc by the program in it.
     let webKit = "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc"
     let safari = FlowReport.Process(pid: 3, path: "/Applications/Safari.app")
 
@@ -276,14 +275,10 @@ struct FlowAttributionTests {
         var attribution = FlowAttribution()
         attribution.responsible = { $0 == 7 ? safari : nil }
         attribution.record([report(path: webKit)])
-        let filter = attribution.owner(of: flow(), libproc: nil)
-        #expect(filter?.name == "Safari")
-        #expect(filter?.pid == 3)
-        #expect(filter?.via == "com.apple.WebKit.Networking (pid 7)")
-
-        let service = SocketOwner(proto: 6, localPort: 52001, pid: 7, name: "com.apple.WebKit.Networking", path: webKit + "/Contents/MacOS/com.apple.WebKit.Networking")
-        let libproc = attribution.owner(of: flow(port: 52001), libproc: service)
-        #expect(libproc == SocketOwner(proto: 6, localPort: 52001, pid: 3, name: "Safari", path: "/Applications/Safari.app", via: "com.apple.WebKit.Networking (pid 7)"))
+        let owner = attribution.owner(of: flow(), libproc: nil)
+        #expect(owner?.name == "Safari")
+        #expect(owner?.pid == 3)
+        #expect(owner?.via == "com.apple.WebKit.Networking (pid 7)")
     }
 
     /// The system holds a terminal responsible for what's run in it, and a daemon for
@@ -293,7 +288,6 @@ struct FlowAttributionTests {
         attribution.responsible = { _ in FlowReport.Process(pid: 4, path: "/System/Applications/Utilities/Terminal.app") }
         attribution.record([report(path: "/usr/bin/curl")])
         #expect(attribution.owner(of: flow())?.name == "curl")
-        #expect(attribution.owner(of: flow(port: 52001), libproc: libproc) == libproc)
     }
 
     /// A service launched for no app is responsible for itself, or for launchd.

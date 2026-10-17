@@ -69,13 +69,9 @@ struct FlowAttribution {
 
     /// The filter's answer wins: it sees the sockets Network.framework runs in user
     /// space, which libproc doesn't, and the app a daemon worked for. Without one the
-    /// answer is libproc's, as it was before there was a filter. Either way an XPC
-    /// service's socket is shown as its app's (`ResponsibleProcess`).
+    /// answer is libproc's, as it was before there was a filter.
     func owner(of flow: Flow, libproc: SocketOwner?) -> SocketOwner? {
-        owner(of: flow) ?? libproc.map { owner in
-            ResponsibleProcess.host(of: FlowReport.Process(pid: owner.pid, path: owner.path), responsible: responsible)
-                .map { SocketOwner(owner, for: $0) } ?? owner
-        }
+        owner(of: flow) ?? libproc
     }
 
     private static func key(_ proto: UInt8, _ port: UInt16) -> Int {
@@ -85,25 +81,14 @@ struct FlowAttribution {
 
 extension SocketOwner {
     init(_ report: FlowReport) {
+        func name(_ process: FlowReport.Process) -> String {
+            process.path.isEmpty ? process.identifier ?? "pid \(process.pid)" : URL(filePath: process.path).deletingPathExtension().lastPathComponent
+        }
         self.init(
             proto: report.proto, localPort: report.localPort, pid: report.app.pid,
-            name: report.app.name, path: report.app.path.isEmpty ? report.app.name : report.app.path,
-            via: report.via.map { "\($0.name) (pid \($0.pid))" }
+            name: name(report.app), path: report.app.path.isEmpty ? name(report.app) : report.app.path,
+            via: report.via.map { "\(name($0)) (pid \($0.pid))" }
         )
-    }
-
-    /// An XPC service's socket, as libproc names it, shown as `host`'s.
-    init(_ service: SocketOwner, for host: FlowReport.Process) {
-        self.init(
-            proto: service.proto, localPort: service.localPort, pid: host.pid,
-            name: host.name, path: host.path, via: "\(service.name) (pid \(service.pid))"
-        )
-    }
-}
-
-extension FlowReport.Process {
-    var name: String {
-        path.isEmpty ? identifier ?? "pid \(pid)" : URL(filePath: path).deletingPathExtension().lastPathComponent
     }
 }
 

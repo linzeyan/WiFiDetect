@@ -1,10 +1,11 @@
 import Foundation
 
 /// The app an XPC service works for. Safari loads its pages through
-/// com.apple.WebKit.Networking, an XPC service whose sockets are its own: the content
-/// filter's audit token and libproc's socket table both name the service (WebKit hands
-/// the app's token over only on iOS). The system records which app each service runs
-/// for, as privacy prompts need to know, and a private call reads that.
+/// com.apple.WebKit.Networking, an XPC service whose connections are its own: the
+/// content filter's audit token names the service (WebKit hands the app's token over
+/// only on iOS), and libproc's socket table doesn't see them at all. The system records
+/// which app each service runs for, as privacy prompts need to know, and a private call
+/// reads that.
 enum ResponsibleProcess {
     typealias Function = @convention(c) (pid_t) -> pid_t
 
@@ -34,8 +35,7 @@ enum ResponsibleProcess {
         return host
     }
 
-    /// A service's bundle, as the content filter names it, or the program inside it,
-    /// as libproc does.
+    /// A service's bundle, as the content filter names it, or the program inside it.
     static func isService(_ path: String) -> Bool {
         path.hasSuffix(".xpc") || path.contains(".xpc/")
     }
