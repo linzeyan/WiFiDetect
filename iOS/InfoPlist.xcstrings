@@ -1,0 +1,26 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "NSLocalNetworkUsageDescription" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WiFiDetect 會在此網路上尋找你的 Mac 以顯示它的 Wi-Fi 讀數，並量測到路由器的往返時間。"
+          }
+        }
+      }
+    },
+    "NSLocationWhenInUseUsageDescription" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WiFiDetect 只會使用你的位置來讀取 Wi-Fi 網路的名稱。iOS 會對沒有定位權限的 App 隱藏它。"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

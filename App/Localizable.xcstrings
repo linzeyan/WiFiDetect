@@ -1,0 +1,4969 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ %@" : {
+      "comment" : "Two sentences: the new connection, then where it is on the blacklist.",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@%2$@"
+          }
+        }
+      }
+    },
+    "%@ (%lld)" : {
+      "shouldTranslate" : false
+    },
+    "%@ (line %d)" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@（第 %2$d 行）"
+          }
+        }
+      }
+    },
+    "%@ (pid %d), through %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@（pid %2$d），經由 %3$@"
+          }
+        }
+      }
+    },
+    "%@ above %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@超過 %2$@"
+          }
+        }
+      }
+    },
+    "%@ and %lld more addresses" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ and %#@addresses@"
+          },
+          "substitutions" : {
+            "addresses" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg more address"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg more addresses"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ 及另外 %2$lld 個位址"
+          }
+        }
+      }
+    },
+    "%@ data sets dropped before their template came" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 個資料集在範本到達前被丟棄"
+          }
+        }
+      }
+    },
+    "%@ from the app, %@ to the server" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App 端為 %1$@，伺服器端為 %2$@"
+          }
+        }
+      }
+    },
+    "%@ has a new connection with %@." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ 與 %2$@ 建立了新連線。"
+          }
+        }
+      }
+    },
+    "%@ is active" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 有活動"
+          }
+        }
+      }
+    },
+    "%@ packets, %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ 個封包，%2$@"
+          }
+        }
+      }
+    },
+    "%@ returned %@ instead of the request or nothing." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ 回傳了 %2$@，而不是請求物件或不回傳。"
+          }
+        }
+      }
+    },
+    "%@ returned %@ instead of the response or nothing." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ 回傳了 %2$@，而不是回應物件或不回傳。"
+          }
+        }
+      }
+    },
+    "%@ that aren't text; they go on as they came." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 的非文字內容，將照原樣送出。"
+          }
+        }
+      }
+    },
+    "%@ to %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ 至 %2$@"
+          }
+        }
+      }
+    },
+    "%@ · Mac starts roaming" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · Mac 開始漫遊"
+          }
+        }
+      }
+    },
+    "%@ · VoIP and streaming" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · VoIP 與串流"
+          }
+        }
+      }
+    },
+    "%@, %@ kept" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@，保留 %2$@"
+          }
+        }
+      }
+    },
+    "%@, %lld blacklisted" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@，%2$lld 個在黑名單中"
+          }
+        }
+      }
+    },
+    "%lld" : {
+      "shouldTranslate" : false
+    },
+    "%lld Hz" : {
+      "shouldTranslate" : false
+    },
+    "%lld MHz" : {
+      "shouldTranslate" : false
+    },
+    "%lld connections" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld connection"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld connections"
+                }
+              }
+            }
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 個連線"
+          }
+        }
+      }
+    },
+    "%lld dB · Poor" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld dB · 差"
+          }
+        }
+      }
+    },
+    "%lld dB · Voice" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld dB · 語音"
+          }
+        }
+      }
+    },
+    "%lld entries" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 個項目"
+          }
+        }
+      }
+    },
+    "%lld flows" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld flow"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld flows"
+                }
+              }
+            }
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 筆流量"
+          }
+        }
+      }
+    },
+    "%lld more" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "還有 %lld 個"
+          }
+        }
+      }
+    },
+    "%lld networks · scanned %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@networks@ · scanned %2$@"
+          },
+          "substitutions" : {
+            "networks" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg network"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg networks"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld 個網路 · 掃描於 %2$@"
+          }
+        }
+      }
+    },
+    "%lld of %lld connections" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld 個連線（共 %2$lld 個）"
+          }
+        }
+      }
+    },
+    "%lld of %lld flows" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld 筆流量（共 %2$lld 筆）"
+          }
+        }
+      }
+    },
+    "%lld of %lld requests" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld 個請求（共 %2$lld 個）"
+          }
+        }
+      }
+    },
+    "%lld requests" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld request"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld requests"
+                }
+              }
+            }
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 個請求"
+          }
+        }
+      }
+    },
+    "%lld-minute averages, shaded from lowest to highest reading" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 分鐘平均值，陰影為最低到最高讀數"
+          }
+        }
+      }
+    },
+    "1 entry" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 個項目"
+          }
+        }
+      }
+    },
+    "1 hour" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 小時"
+          }
+        }
+      }
+    },
+    "1 min" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 分鐘"
+          }
+        }
+      }
+    },
+    "24 hours" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "24 小時"
+          }
+        }
+      }
+    },
+    "30 min" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "30 分鐘"
+          }
+        }
+      }
+    },
+    "5 min" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5 分鐘"
+          }
+        }
+      }
+    },
+    "7 days" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7 天"
+          }
+        }
+      }
+    },
+    "A blacklisted address has a new connection" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "黑名單中的位址有新連線"
+          }
+        }
+      }
+    },
+    "A favorite host has a new connection" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最愛的主機有新連線"
+          }
+        }
+      }
+    },
+    "A matching request or response is collected whole and handed to the script's onRequest(request) or onResponse(request, response). A request has method, path, headers and body; a response has status, headers and body. Headers are a list of [name, value] pairs, so repeated ones like Set-Cookie stay apart. The body is the text, decoded, or null when it isn't text; null sends it on as it came. Edit the object or return a new one; returning nothing sends on the one given, edits included. A script that throws or runs past 5 seconds leaves the message as it came, and the inspector says why. Scripts run before breakpoints, which then show the script's edit. Patterns work as in Map Local, and the first match runs. Scripts can't reach the network or files, and keep nothing between runs." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "符合的請求或回應會完整收齊後，交給腳本的 onRequest(request) 或 onResponse(request, response)。請求有 method、path、headers 和 body；回應有 status、headers 和 body。headers 是 [name, value] 配對的列表，因此像 Set-Cookie 這類重複的標頭會分開保留。body 是解碼後的文字，不是文字時為 null；設為 null 則照原樣送出。你可以修改該物件或回傳新的物件；不回傳任何值則送出原物件，包含你的修改。腳本拋出例外或執行超過 5 秒時，訊息會照原樣送出，檢閱器會說明原因。腳本在中斷點之前執行，中斷點會顯示腳本修改後的內容。樣式的用法與 Map Local 相同，並執行第一個符合的腳本。腳本無法存取網路或檔案，每次執行之間也不會保留任何資料。"
+          }
+        }
+      }
+    },
+    "A matching request waits before it goes to the server, and a matching response before it goes back to the app, for you to edit or abort in the Requests inspector. Patterns work as in Map Local, but every matching rule applies. The app waits too, and most give up after a minute." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "符合的請求會在送往伺服器前、符合的回應會在送回 App 前暫停，讓你在「請求」的檢閱器中編輯或中止。樣式的用法與 Map Local 相同，但所有符合的規則都會套用。App 也會跟著等待，多數 App 約一分鐘後就會放棄。"
+          }
+        }
+      }
+    },
+    "A request whose URL matches gets the file as its response, read fresh each time; the server never sees it. * matches anything, a pattern without http:// or https:// covers both, and the first match wins. Only requests WiFiDetect can read are mapped: plain HTTP, and HTTPS for the hosts listed in the Proxy tab. Other HTTPS passes through unread and is never mapped." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL 符合的請求會以該檔案作為回應，每次都重新讀取；伺服器不會收到請求。* 可符合任何內容，沒寫 http:// 或 https:// 的樣式兩者皆適用，並以第一個符合的規則為準。只有 WiFiDetect 能讀取的請求才會被對應：純 HTTP，以及「代理伺服器」標籤頁所列主機的 HTTPS。其他 HTTPS 會直接通過、不被讀取，也永遠不會被對應。"
+          }
+        }
+      }
+    },
+    "A request whose URL matches goes to this server instead, with the same path, query and body; its Host header names the new server. Give http:// or https://, a host and, if it isn't the usual one, a port. Patterns work as in Map Local, only for requests WiFiDetect can read, and the first match wins. A request Map Local answers isn't sent anywhere." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL 符合的請求會改送到這台伺服器，路徑、查詢字串與內文不變；其 Host 標頭會改為新的伺服器。請填入 http:// 或 https://、主機，若不是預設連接埠也請填入連接埠。樣式的用法與 Map Local 相同，只適用於 WiFiDetect 能讀取的請求，並以第一個符合的規則為準。已由 Map Local 回應的請求不會被送往任何地方。"
+          }
+        }
+      }
+    },
+    "A router sends the layout of its records (a template) every few minutes. Records that arrive before it can't be read; the count stops growing once it comes." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "路由器每隔幾分鐘會送出紀錄的格式（範本）。比範本早到的紀錄無法讀取；範本到達後，這個數字就不會再增加。"
+          }
+        }
+      }
+    },
+    "Abort" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中止"
+          }
+        }
+      }
+    },
+    "Aborted at the request breakpoint." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已在請求中斷點中止。"
+          }
+        }
+      }
+    },
+    "Aborted at the response breakpoint." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已在回應中斷點中止。"
+          }
+        }
+      }
+    },
+    "About WiFiDetect" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "關於 WiFiDetect"
+          }
+        }
+      }
+    },
+    "Above %@ for %lld seconds in a row, at %@/s in the last one." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "連續 %2$lld 秒超過 %1$@，最後一秒為 %3$@/s。"
+          }
+        }
+      }
+    },
+    "Add %@ to Favorites" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "將 %@ 加入最愛"
+          }
+        }
+      }
+    },
+    "Add App…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加入 App⋯"
+          }
+        }
+      }
+    },
+    "Add Breakpoint" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加入中斷點"
+          }
+        }
+      }
+    },
+    "Add Map Remote" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加入 Map Remote"
+          }
+        }
+      }
+    },
+    "Add Script…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加入腳本⋯"
+          }
+        }
+      }
+    },
+    "Add to Favorites" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加入最愛"
+          }
+        }
+      }
+    },
+    "Added latency (ms)" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "增加的延遲（ms）"
+          }
+        }
+      }
+    },
+    "Address, domain, program or service" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "位址、網域、程式或服務"
+          }
+        }
+      }
+    },
+    "All" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部"
+          }
+        }
+      }
+    },
+    "All stored readings are deleted and the signal charts start over. This can't be undone." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "所有儲存的讀數都會被刪除，訊號圖表將重新開始。此動作無法復原。"
+          }
+        }
+      }
+    },
+    "Allow “WiFiDetect” in System Settings › General › Login Items › Allow in the Background." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請在「系統設定 › 一般 › 登入項目 › 允許在背景執行」中允許「WiFiDetect」。"
+          }
+        }
+      }
+    },
+    "Also capturing the HTTPS of %@, which ignore the system proxy." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "也正在擷取不使用系統代理伺服器的 %@ 的 HTTPS。"
+          }
+        }
+      }
+    },
+    "Also capturing the HTTPS of %@, which ignores the system proxy." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "也正在擷取不使用系統代理伺服器的 %@ 的 HTTPS。"
+          }
+        }
+      }
+    },
+    "An exception" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "發生例外"
+          }
+        }
+      }
+    },
+    "Answer the app with a 502 instead." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "改以 502 回應 App。"
+          }
+        }
+      }
+    },
+    "App" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App"
+          }
+        }
+      }
+    },
+    "App attribution" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App 辨識"
+          }
+        }
+      }
+    },
+    "Apple's services refuse to be decrypted, so WiFiDetect never tries." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple 的服務拒絕被解密，因此 WiFiDetect 從不嘗試。"
+          }
+        }
+      }
+    },
+    "Apps that ignore the system proxy" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不使用系統代理伺服器的 App"
+          }
+        }
+      }
+    },
+    "Apps that use the system proxy show up here as they make requests." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用系統代理伺服器的 App 發出請求時，會顯示在這裡。"
+          }
+        }
+      }
+    },
+    "Auto-Scan" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自動掃描"
+          }
+        }
+      }
+    },
+    "Average download" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "平均下載"
+          }
+        }
+      }
+    },
+    "Average upload" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "平均上傳"
+          }
+        }
+      }
+    },
+    "BSSID" : {
+      "shouldTranslate" : false
+    },
+    "Back to Live" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回到即時"
+          }
+        }
+      }
+    },
+    "Band" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "頻段"
+          }
+        }
+      }
+    },
+    "Binary" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二進位"
+          }
+        }
+      }
+    },
+    "Blacklist" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "黑名單"
+          }
+        }
+      }
+    },
+    "Blacklisted" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "黑名單中"
+          }
+        }
+      }
+    },
+    "Blacklisted address" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "黑名單中的位址"
+          }
+        }
+      }
+    },
+    "Blacklisted addresses" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "黑名單中的位址"
+          }
+        }
+      }
+    },
+    "Body" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "內文"
+          }
+        }
+      }
+    },
+    "Breakpoint" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中斷點"
+          }
+        }
+      }
+    },
+    "Breakpoints" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中斷點"
+          }
+        }
+      }
+    },
+    "Broadcast" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "廣播"
+          }
+        }
+      }
+    },
+    "Bytes" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "位元組"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
+          }
+        }
+      }
+    },
+    "Capture" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "擷取"
+          }
+        }
+      }
+    },
+    "Capture apps that ignore the system proxy" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "擷取不使用系統代理伺服器的 App"
+          }
+        }
+      }
+    },
+    "Capture files don't record which program sent a packet." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "擷取檔不會記錄封包是由哪個程式送出。"
+          }
+        }
+      }
+    },
+    "Capture filter (BPF), e.g. tcp port 443" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "擷取篩選條件（BPF），例如 tcp port 443"
+          }
+        }
+      }
+    },
+    "Capture helper" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "擷取輔助程式"
+          }
+        }
+      }
+    },
+    "Capture of %@ stopped. Turn it off and on again in Proxy Settings." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 的擷取已停止。請在代理伺服器設定中關閉後再重新開啟。"
+          }
+        }
+      }
+    },
+    "Certificate" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "憑證"
+          }
+        }
+      }
+    },
+    "Channel" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "頻道"
+          }
+        }
+      }
+    },
+    "Channel %lld" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "頻道 %lld"
+          }
+        }
+      }
+    },
+    "Checked every second while capture runs, with or without the WiFiDetect window open. Traffic counts as above the limit after %lld seconds in a row. The limit, each blacklist entry and each favorite notify at most once a minute." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "擷取進行時每秒檢查一次，無論 WiFiDetect 視窗是否開啟。流量連續 %lld 秒超過上限才算超過。上限、每個黑名單項目和每個最愛，每分鐘最多各通知一次。"
+          }
+        }
+      }
+    },
+    "Checking…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在檢查⋯"
+          }
+        }
+      }
+    },
+    "Clear" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除"
+          }
+        }
+      }
+    },
+    "Clear History" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除歷史紀錄"
+          }
+        }
+      }
+    },
+    "Clear History…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除歷史紀錄⋯"
+          }
+        }
+      }
+    },
+    "Clear the Wi-Fi history?" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "要清除 Wi-Fi 歷史紀錄嗎？"
+          }
+        }
+      }
+    },
+    "Close" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "關閉"
+          }
+        }
+      }
+    },
+    "Collect flows from routers" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "從路由器收集流量"
+          }
+        }
+      }
+    },
+    "Collector Off" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "收集器已關閉"
+          }
+        }
+      }
+    },
+    "Connected" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已連線"
+          }
+        }
+      }
+    },
+    "Connected devices" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已連線的裝置"
+          }
+        }
+      }
+    },
+    "Connection Details" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "連線詳細資訊"
+          }
+        }
+      }
+    },
+    "Connections" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "連線"
+          }
+        }
+      }
+    },
+    "Connections idle for 10 minutes are removed." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "閒置 10 分鐘的連線會被移除。"
+          }
+        }
+      }
+    },
+    "Continue" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "繼續"
+          }
+        }
+      }
+    },
+    "Couldn't add the certificate to the keychain" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法將憑證加入鑰匙圈"
+          }
+        }
+      }
+    },
+    "Couldn't connect to %@:%lld." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法連線到 %1$@:%2$lld。"
+          }
+        }
+      }
+    },
+    "Couldn't create %@." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法建立 %@。"
+          }
+        }
+      }
+    },
+    "Couldn't decrypt %@: %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法解密 %1$@：%2$@"
+          }
+        }
+      }
+    },
+    "Couldn't delete the private key" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法刪除私密金鑰"
+          }
+        }
+      }
+    },
+    "Couldn't read the private key" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法讀取私密金鑰"
+          }
+        }
+      }
+    },
+    "Couldn't remove the trust setting" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法移除信任設定"
+          }
+        }
+      }
+    },
+    "Couldn't trust the certificate" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法信任憑證"
+          }
+        }
+      }
+    },
+    "Couldn't undo the %@ encoding; showing the bytes as sent." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法還原 %@ 編碼；以傳送時的位元組顯示。"
+          }
+        }
+      }
+    },
+    "Countries" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "國家或地區"
+          }
+        }
+      }
+    },
+    "Country" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "國家或地區"
+          }
+        }
+      }
+    },
+    "Create and Trust…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "製作並信任⋯"
+          }
+        }
+      }
+    },
+    "Created, not trusted" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已製作，未信任"
+          }
+        }
+      }
+    },
+    "Custom" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自訂"
+          }
+        }
+      }
+    },
+    "Decrypt %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "解密 %@"
+          }
+        }
+      }
+    },
+    "Decrypt HTTPS for" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "解密以下主機的 HTTPS"
+          }
+        }
+      }
+    },
+    "Decrypting HTTPS for %@." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在解密 %@ 的 HTTPS。"
+          }
+        }
+      }
+    },
+    "Decrypting also needs WiFiDetect's certificate trusted, in Proxy Settings." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "解密還需要在代理伺服器設定中信任 WiFiDetect 的憑證。"
+          }
+        }
+      }
+    },
+    "Decrypting no HTTPS hosts yet." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未解密任何 HTTPS 主機。"
+          }
+        }
+      }
+    },
+    "Destination" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目的地"
+          }
+        }
+      }
+    },
+    "Direction" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "方向"
+          }
+        }
+      }
+    },
+    "Domain" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "網域"
+          }
+        }
+      }
+    },
+    "Download" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下載"
+          }
+        }
+      }
+    },
+    "Download (kbit/s)" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下載（kbit/s）"
+          }
+        }
+      }
+    },
+    "Download and upload" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下載與上傳"
+          }
+        }
+      }
+    },
+    "Dropped" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已丟棄"
+          }
+        }
+      }
+    },
+    "Duration" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時間長度"
+          }
+        }
+      }
+    },
+    "Dynamic WEP" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "動態 WEP"
+          }
+        }
+      }
+    },
+    "Each header is a [name, value] pair of text: the name without spaces or colons, the value on one line. Not %@." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每個標頭都必須是文字的 [name, value] 配對：名稱不含空格或冒號，值只有一行。不能是 %@。"
+          }
+        }
+      }
+    },
+    "Each header line is a name, a colon, then the value." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每行標頭依序為名稱、冒號、值。"
+          }
+        }
+      }
+    },
+    "Edit…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "編輯⋯"
+          }
+        }
+      }
+    },
+    "Empty." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "空白。"
+          }
+        }
+      }
+    },
+    "Enhanced Open" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "增強型開放"
+          }
+        }
+      }
+    },
+    "Enhanced Open (transition)" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "增強型開放（過渡模式）"
+          }
+        }
+      }
+    },
+    "Enterprise" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "企業級"
+          }
+        }
+      }
+    },
+    "Every %lld s" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每 %lld 秒"
+          }
+        }
+      }
+    },
+    "Every connection in the file is listed, up to the 10,000 most recently active." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "列出檔案中的所有連線，最多為最近有活動的 10,000 個。"
+          }
+        }
+      }
+    },
+    "Every reading in the time window shown" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目前時間範圍內的每筆讀數"
+          }
+        }
+      }
+    },
+    "Excellent" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "極佳"
+          }
+        }
+      }
+    },
+    "Excellent from" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「極佳」的最低值"
+          }
+        }
+      }
+    },
+    "Expected CONNECT host:port." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "應為 CONNECT host:port。"
+          }
+        }
+      }
+    },
+    "Export CSV…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "輸出 CSV⋯"
+          }
+        }
+      }
+    },
+    "Export HAR…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "輸出 HAR⋯"
+          }
+        }
+      }
+    },
+    "Exporter" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "匯出器"
+          }
+        }
+      }
+    },
+    "Exporter, address, protocol or location" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "匯出器、位址、協定或位置"
+          }
+        }
+      }
+    },
+    "Failed" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "失敗"
+          }
+        }
+      }
+    },
+    "Fair" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "普通"
+          }
+        }
+      }
+    },
+    "Fair from" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「普通」的最低值"
+          }
+        }
+      }
+    },
+    "Favorite" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最愛"
+          }
+        }
+      }
+    },
+    "Favorite hosts are active" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最愛的主機有活動"
+          }
+        }
+      }
+    },
+    "Favorites" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最愛"
+          }
+        }
+      }
+    },
+    "Filter" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "篩選條件"
+          }
+        }
+      }
+    },
+    "First seen" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "首次出現"
+          }
+        }
+      }
+    },
+    "Floor" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "底線"
+          }
+        }
+      }
+    },
+    "Flows no record has updated for 10 minutes are removed, and at most the 10,000 most recently updated are kept." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10 分鐘內沒有紀錄更新的流量會被移除，最多保留最近更新的 10,000 筆。"
+          }
+        }
+      }
+    },
+    "Format" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "格式"
+          }
+        }
+      }
+    },
+    "Good" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "良好"
+          }
+        }
+      }
+    },
+    "Good from" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「良好」的最低值"
+          }
+        }
+      }
+    },
+    "HTTP" : {
+      "shouldTranslate" : false
+    },
+    "HTTPS passes through unread until you trust WiFiDetect's certificate." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在你信任 WiFiDetect 的憑證之前，HTTPS 會直接通過，不會被讀取。"
+          }
+        }
+      }
+    },
+    "Headers, one per line" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "標頭，每行一個"
+          }
+        }
+      }
+    },
+    "Held at a breakpoint: send it on or abort it in the inspector." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已在中斷點攔下：請在檢閱器中繼續送出或中止。"
+          }
+        }
+      }
+    },
+    "Held before it goes back to the app" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在送回 App 前攔下"
+          }
+        }
+      }
+    },
+    "Held before it goes to the server" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在送往伺服器前攔下"
+          }
+        }
+      }
+    },
+    "Helper" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "輔助程式"
+          }
+        }
+      }
+    },
+    "Hex" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十六進位"
+          }
+        }
+      }
+    },
+    "Hidden" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已隱藏"
+          }
+        }
+      }
+    },
+    "Highest" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最高"
+          }
+        }
+      }
+    },
+    "History" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "歷史紀錄"
+          }
+        }
+      }
+    },
+    "Host" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主機"
+          }
+        }
+      }
+    },
+    "Hosts" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主機"
+          }
+        }
+      }
+    },
+    "IP Geolocation by DB-IP" : {
+      "shouldTranslate" : false
+    },
+    "IPFIX" : {
+      "shouldTranslate" : false
+    },
+    "Import" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "輸入"
+          }
+        }
+      }
+    },
+    "Import from File…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "從檔案輸入⋯"
+          }
+        }
+      }
+    },
+    "In" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "流入"
+          }
+        }
+      }
+    },
+    "In %@ on your blacklist" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "屬於你黑名單中的 %@"
+          }
+        }
+      }
+    },
+    "In and Out are as seen from %@, taken as the capturing machine for being in the most conversations. Capture files don't record programs." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "流入與流出是從 %@ 的角度計算；它參與的對話最多，因此視為擷取端機器。擷取檔不會記錄程式。"
+          }
+        }
+      }
+    },
+    "Inspector" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "檢閱器"
+          }
+        }
+      }
+    },
+    "Install" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安裝"
+          }
+        }
+      }
+    },
+    "Install Helper" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安裝輔助程式"
+          }
+        }
+      }
+    },
+    "Install the Capture Helper" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安裝擷取輔助程式"
+          }
+        }
+      }
+    },
+    "Install the Helper" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安裝輔助程式"
+          }
+        }
+      }
+    },
+    "Installed" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已安裝"
+          }
+        }
+      }
+    },
+    "Installing was cancelled." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已取消安裝。"
+          }
+        }
+      }
+    },
+    "Installing…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在安裝⋯"
+          }
+        }
+      }
+    },
+    "Interface" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "介面"
+          }
+        }
+      }
+    },
+    "Internet" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "網際網路"
+          }
+        }
+      }
+    },
+    "Interval" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "間隔"
+          }
+        }
+      }
+    },
+    "It didn't finish within %@. JavaScriptCore has no public way to stop it, so it keeps one CPU core busy until WiFiDetect quits." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "腳本未在 %@內完成。JavaScriptCore 沒有公開的方式能停止它，因此在 WiFiDetect 結束前，它會持續占用一個 CPU 核心。"
+          }
+        }
+      }
+    },
+    "It's in %@ on your blacklist." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "它屬於你黑名單中的 %@。"
+          }
+        }
+      }
+    },
+    "It's on your blacklist." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "它在你的黑名單中。"
+          }
+        }
+      }
+    },
+    "Its flow had already left the list." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這筆請求已不在列表中。"
+          }
+        }
+      }
+    },
+    "Its frames are %@, which WiFiDetect doesn't read: only packet counts and sizes show, no connections." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "其訊框為 %@，WiFiDetect 無法解讀：只會顯示封包數與大小，不會顯示連線。"
+          }
+        }
+      }
+    },
+    "Last 5 minutes" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最近 5 分鐘"
+          }
+        }
+      }
+    },
+    "Last seen" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最後出現"
+          }
+        }
+      }
+    },
+    "Limit" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上限"
+          }
+        }
+      }
+    },
+    "Line" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "線條"
+          }
+        }
+      }
+    },
+    "Line %lld: %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第 %1$lld 行：%2$@"
+          }
+        }
+      }
+    },
+    "Link-local" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "鏈路本地"
+          }
+        }
+      }
+    },
+    "Listening for NetFlow v9 and IPFIX on UDP port %@. Set your router to export flows to %@, port %@." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在 UDP 連接埠 %1$@ 上接收 NetFlow v9 與 IPFIX。請將路由器設為把流量匯出到 %2$@ 的連接埠 %3$@。"
+          }
+        }
+      }
+    },
+    "Listening on 127.0.0.1:%@; this Mac's apps send their web traffic here." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在 127.0.0.1:%@ 上監聽；這台 Mac 的 App 會將網頁流量送到這裡。"
+          }
+        }
+      }
+    },
+    "Listening on UDP port %lld" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在 UDP 連接埠 %lld 上監聽"
+          }
+        }
+      }
+    },
+    "Listens on 127.0.0.1 only. A new port takes effect the next time the proxy starts." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "只在 127.0.0.1 上監聽。新的連接埠會在下次啟動代理伺服器時生效。"
+          }
+        }
+      }
+    },
+    "Local" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本機"
+          }
+        }
+      }
+    },
+    "Location" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "位置"
+          }
+        }
+      }
+    },
+    "Location access is off for WiFiDetect, so macOS hides network names and BSSIDs." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WiFiDetect 的定位權限已關閉，因此 macOS 會隱藏網路名稱與 BSSID。"
+          }
+        }
+      }
+    },
+    "Lowest" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最低"
+          }
+        }
+      }
+    },
+    "MB/s" : {
+      "shouldTranslate" : false
+    },
+    "Map" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "對應"
+          }
+        }
+      }
+    },
+    "Map Local" : {
+      "shouldTranslate" : false
+    },
+    "Map Local couldn't read %@: %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Map Local 無法讀取 %1$@：%2$@"
+          }
+        }
+      }
+    },
+    "Map Local: %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Map Local：%@"
+          }
+        }
+      }
+    },
+    "Map Remote" : {
+      "shouldTranslate" : false
+    },
+    "Map Remote: %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Map Remote：%@"
+          }
+        }
+      }
+    },
+    "Map to File…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "對應到檔案⋯"
+          }
+        }
+      }
+    },
+    "Measure" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "度量"
+          }
+        }
+      }
+    },
+    "Message" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "訊息"
+          }
+        }
+      }
+    },
+    "Messages" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "訊息"
+          }
+        }
+      }
+    },
+    "Method" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "方法"
+          }
+        }
+      }
+    },
+    "Move WiFiDetect to the Applications folder and open it from there: macOS installs network extensions only from there." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請將 WiFiDetect 移到「應用程式」檔案夾，並從那裡打開：macOS 只會從該處安裝網路延伸功能。"
+          }
+        }
+      }
+    },
+    "Multicast" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "多點傳送"
+          }
+        }
+      }
+    },
+    "Name" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名稱"
+          }
+        }
+      }
+    },
+    "Name apps with a content filter" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以內容過濾器辨識 App"
+          }
+        }
+      }
+    },
+    "Names the app behind each new connection, including those URLSession and other Network.framework code open, which the socket table can't see, and the app a system daemon such as nsurlsessiond works for. It never blocks anything: every connection is let through. If the extension stops, the connections it was watching are cut off; new ones go through without it. Connections that started before it was on keep the names they had." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "辨識每個新連線背後的 App，包括 socket 表看不到、由 URLSession 和其他 Network.framework 程式碼開啟的連線，以及 nsurlsessiond 等系統常駐程式代為服務的 App。它從不封鎖任何東西：所有連線都會放行。若延伸功能停止，它正在監看的連線會被中斷；新的連線則會繞過它。在它開啟前就已建立的連線會保留原本的名稱。"
+          }
+        }
+      }
+    },
+    "Nearby Networks" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "附近的網路"
+          }
+        }
+      }
+    },
+    "NetFlow v9" : {
+      "shouldTranslate" : false
+    },
+    "NetFlow v9 and IPFIX from routers set to export to this Mac, shown in Traffic › Router Flows. 4739 is IPFIX's registered port; routers often default to 2055 for NetFlow. Listens on every network interface: anything that reaches this Mac on the port can add flows." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "接收設為匯出到這台 Mac 的路由器所送出的 NetFlow v9 與 IPFIX，顯示於「流量 › 路由器流量」。4739 是 IPFIX 的註冊連接埠；路由器的 NetFlow 預設常為 2055。會在所有網路介面上監聽：任何能透過此連接埠連到這台 Mac 的來源都能加入流量。"
+          }
+        }
+      }
+    },
+    "Network" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "網路"
+          }
+        }
+      }
+    },
+    "Network extension" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "網路延伸功能"
+          }
+        }
+      }
+    },
+    "New connection with %@." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "與 %@ 建立了新連線。"
+          }
+        }
+      }
+    },
+    "New connections with %@, all on your blacklist." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "與 %@ 的新連線，全都在你的黑名單中。"
+          }
+        }
+      }
+    },
+    "New connections with %@." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "與 %@ 的新連線。"
+          }
+        }
+      }
+    },
+    "No Blacklisted Connections" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒有黑名單中的連線"
+          }
+        }
+      }
+    },
+    "No Connections in This File" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此檔案中沒有連線"
+          }
+        }
+      }
+    },
+    "No Connections to Favorites" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒有連往最愛的連線"
+          }
+        }
+      }
+    },
+    "No Flow Records Yet" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚無流量紀錄"
+          }
+        }
+      }
+    },
+    "No Networks Found" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "找不到網路"
+          }
+        }
+      }
+    },
+    "No Request Selected" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未選取請求"
+          }
+        }
+      }
+    },
+    "No Wi-Fi interface" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒有 Wi-Fi 介面"
+          }
+        }
+      }
+    },
+    "No body." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒有內文。"
+          }
+        }
+      }
+    },
+    "No favorites yet." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚無最愛。"
+          }
+        }
+      }
+    },
+    "No headers yet." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚無標頭。"
+          }
+        }
+      }
+    },
+    "No messages yet." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚無訊息。"
+          }
+        }
+      }
+    },
+    "No networks" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒有網路"
+          }
+        }
+      }
+    },
+    "No packets in this file." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此檔案中沒有封包。"
+          }
+        }
+      }
+    },
+    "No status code." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒有狀態碼。"
+          }
+        }
+      }
+    },
+    "Noise" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "雜訊"
+          }
+        }
+      }
+    },
+    "Not Capturing" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未在擷取"
+          }
+        }
+      }
+    },
+    "Not an address or range, so nothing matches:" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以下不是位址或範圍，因此不會符合任何連線："
+          }
+        }
+      }
+    },
+    "Not capturing %@: %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未擷取 %1$@：%2$@"
+          }
+        }
+      }
+    },
+    "Not connected" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未連線"
+          }
+        }
+      }
+    },
+    "Not created" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未製作"
+          }
+        }
+      }
+    },
+    "Not in this build" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此版本未包含"
+          }
+        }
+      }
+    },
+    "Not installed" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未安裝"
+          }
+        }
+      }
+    },
+    "Not recorded in capture files" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "擷取檔不會記錄"
+          }
+        }
+      }
+    },
+    "Not valid JSON." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不是有效的 JSON。"
+          }
+        }
+      }
+    },
+    "Notify me when" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在以下情況通知我"
+          }
+        }
+      }
+    },
+    "On" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "啟用"
+          }
+        }
+      }
+    },
+    "On your blacklist" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在你的黑名單中"
+          }
+        }
+      }
+    },
+    "One IPv4 or IPv6 address or CIDR range per line, such as 203.0.113.7 or 203.0.113.0/24; text after # or ; is a comment. Connections whose remote address matches are marked Blacklisted in Connections. WiFiDetect doesn't download lists: import one you trust." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每行一個 IPv4 或 IPv6 位址或 CIDR 範圍，例如 203.0.113.7 或 203.0.113.0/24；# 或 ; 之後的文字為註解。遠端位址符合的連線，會在「連線」中標示為「黑名單中」。WiFiDetect 不會下載名單：請輸入你信任的名單。"
+          }
+        }
+      }
+    },
+    "One host per line; *.example.com covers every subdomain. Other HTTPS passes through unread, and so does Apple's own traffic, which refuses to be decrypted." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每行一個主機；*.example.com 涵蓋所有子網域。其他 HTTPS 會直接通過、不被讀取，Apple 自己的流量也是如此，因為它拒絕被解密。"
+          }
+        }
+      }
+    },
+    "Only the first 10 MB of %@ were kept." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 中只保留了前 10 MB。"
+          }
+        }
+      }
+    },
+    "Open" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無"
+          }
+        }
+      }
+    },
+    "Open Capture…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打開擷取檔⋯"
+          }
+        }
+      }
+    },
+    "Open Location Settings…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打開定位服務設定⋯"
+          }
+        }
+      }
+    },
+    "Open Login Items" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打開登入項目"
+          }
+        }
+      }
+    },
+    "Open Notification Settings" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打開通知設定"
+          }
+        }
+      }
+    },
+    "Open System Settings" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打開系統設定"
+          }
+        }
+      }
+    },
+    "Open WiFiDetect" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打開 WiFiDetect"
+          }
+        }
+      }
+    },
+    "Other networks" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "其他網路"
+          }
+        }
+      }
+    },
+    "Out" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "流出"
+          }
+        }
+      }
+    },
+    "Overview" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "總覽"
+          }
+        }
+      }
+    },
+    "PHY" : {
+      "shouldTranslate" : false
+    },
+    "PHY mode" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PHY 模式"
+          }
+        }
+      }
+    },
+    "Packets" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "封包"
+          }
+        }
+      }
+    },
+    "Packets in" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "流入封包"
+          }
+        }
+      }
+    },
+    "Packets out" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "流出封包"
+          }
+        }
+      }
+    },
+    "Packets per second" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每秒封包數"
+          }
+        }
+      }
+    },
+    "Passed through encrypted: only the host and the byte counts are known." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已加密通過：只知道主機與位元組數。"
+          }
+        }
+      }
+    },
+    "Path" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "路徑"
+          }
+        }
+      }
+    },
+    "Paused" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已暫停"
+          }
+        }
+      }
+    },
+    "Personal" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "個人級"
+          }
+        }
+      }
+    },
+    "Poor" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "差"
+          }
+        }
+      }
+    },
+    "Poor below" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "低於此值為「差」"
+          }
+        }
+      }
+    },
+    "Poor from" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「差」的最低值"
+          }
+        }
+      }
+    },
+    "Port" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "連接埠"
+          }
+        }
+      }
+    },
+    "Port %lld is taken by another app. Choose another in Settings › Proxy." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "連接埠 %lld 已被其他 App 使用。請在「設定 › 代理伺服器」中選擇其他連接埠。"
+          }
+        }
+      }
+    },
+    "Port %lld is taken by another app. Choose another." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "連接埠 %lld 已被其他 App 使用。請選擇其他連接埠。"
+          }
+        }
+      }
+    },
+    "Preset" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "預設組合"
+          }
+        }
+      }
+    },
+    "Press Return to apply" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按 Return 套用"
+          }
+        }
+      }
+    },
+    "Private network" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "私人網路"
+          }
+        }
+      }
+    },
+    "Program" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "程式"
+          }
+        }
+      }
+    },
+    "Programs" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "程式"
+          }
+        }
+      }
+    },
+    "Protocol" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "協定"
+          }
+        }
+      }
+    },
+    "Proxy" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理伺服器"
+          }
+        }
+      }
+    },
+    "Proxy Off" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理伺服器已關閉"
+          }
+        }
+      }
+    },
+    "Proxy Settings…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理伺服器設定⋯"
+          }
+        }
+      }
+    },
+    "RSSI" : {
+      "shouldTranslate" : false
+    },
+    "RTT" : {
+      "shouldTranslate" : false
+    },
+    "Radio" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無線電"
+          }
+        }
+      }
+    },
+    "Rate" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "速率"
+          }
+        }
+      }
+    },
+    "Reading the File" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在讀取檔案"
+          }
+        }
+      }
+    },
+    "Readings from the last 7 days are kept on this Mac, in ~/Library/Application Support/WiFiDetect/Wi-Fi Readings, so the signal charts pick up where they left off. They hold signal, noise and the time, never the network's name. Traffic and requests aren't kept." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最近 7 天的讀數會保存在這台 Mac 的 ~/Library/Application Support/WiFiDetect/Wi-Fi Readings，讓訊號圖表能接續先前的紀錄。讀數只包含訊號、雜訊和時間，絕不包含網路名稱。流量與請求不會保存。"
+          }
+        }
+      }
+    },
+    "Reading…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在讀取⋯"
+          }
+        }
+      }
+    },
+    "Reading… %@ packets so far" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在讀取⋯目前 %@ 個封包"
+          }
+        }
+      }
+    },
+    "Received" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已接收"
+          }
+        }
+      }
+    },
+    "Record PCAP…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "錄製 PCAP⋯"
+          }
+        }
+      }
+    },
+    "Recording %@ packets to %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在將 %1$@ 個封包錄製到 %2$@"
+          }
+        }
+      }
+    },
+    "Reference" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "參考線"
+          }
+        }
+      }
+    },
+    "Remote" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "遠端"
+          }
+        }
+      }
+    },
+    "Remove" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "移除"
+          }
+        }
+      }
+    },
+    "Remove %@ from Favorites" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "將 %@ 從最愛移除"
+          }
+        }
+      }
+    },
+    "Remove from Favorites" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "從最愛移除"
+          }
+        }
+      }
+    },
+    "Remove…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "移除⋯"
+          }
+        }
+      }
+    },
+    "Request" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請求"
+          }
+        }
+      }
+    },
+    "Request body" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請求內文"
+          }
+        }
+      }
+    },
+    "Request held for %@." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請求被攔下 %@。"
+          }
+        }
+      }
+    },
+    "Request not held: its body is over 10 MB." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請求未攔下：內文超過 10 MB。"
+          }
+        }
+      }
+    },
+    "Request script failed, so the request went on as it came: %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請求腳本執行失敗，因此請求照原樣送出：%@"
+          }
+        }
+      }
+    },
+    "Request script not run: its body is over 10 MB." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未執行請求腳本：內文超過 10 MB。"
+          }
+        }
+      }
+    },
+    "Request script ran in %@." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請求腳本執行耗時 %@。"
+          }
+        }
+      }
+    },
+    "Requests" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請求"
+          }
+        }
+      }
+    },
+    "Reserved" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保留位址"
+          }
+        }
+      }
+    },
+    "Response" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回應"
+          }
+        }
+      }
+    },
+    "Response body" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回應內文"
+          }
+        }
+      }
+    },
+    "Response held for %@." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回應被攔下 %@。"
+          }
+        }
+      }
+    },
+    "Response not held: its body is over 10 MB." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回應未攔下：內文超過 10 MB。"
+          }
+        }
+      }
+    },
+    "Response script failed, so the response went on as it came: %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回應腳本執行失敗，因此回應照原樣送出：%@"
+          }
+        }
+      }
+    },
+    "Response script not run: its body is over 10 MB." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未執行回應腳本：內文超過 10 MB。"
+          }
+        }
+      }
+    },
+    "Response script ran in %@." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回應腳本執行耗時 %@。"
+          }
+        }
+      }
+    },
+    "Restart the Mac to finish installing it" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新啟動 Mac 以完成安裝"
+          }
+        }
+      }
+    },
+    "Restore Defaults" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回復預設值"
+          }
+        }
+      }
+    },
+    "Roaming line" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "漫遊線"
+          }
+        }
+      }
+    },
+    "Round trip of the TCP handshake, timed at %@: its SYN to the SYN-ACK when it opened the connection, its SYN-ACK to the ACK when the other end did. “—” when the capture missed the handshake, and for anything but TCP." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TCP 交握的往返時間，量測位置：%@。本端開啟連線時為 SYN 到 SYN-ACK，對方開啟時為 SYN-ACK 到 ACK。擷取時錯過交握，或不是 TCP 時，顯示「—」。"
+          }
+        }
+      }
+    },
+    "Router Flows" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "路由器流量"
+          }
+        }
+      }
+    },
+    "Router flows" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "路由器流量"
+          }
+        }
+      }
+    },
+    "Rules" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "規則"
+          }
+        }
+      }
+    },
+    "Runs as root, only to read packets for traffic monitoring and to point the system proxy at WiFiDetect. It starts when WiFiDetect connects to it and quits when WiFiDetect does, putting the proxy settings back." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以 root 身分執行，只用來為流量監控讀取封包，以及將系統代理伺服器指向 WiFiDetect。它在 WiFiDetect 連線時啟動，並隨 WiFiDetect 一起結束，同時還原代理伺服器設定。"
+          }
+        }
+      }
+    },
+    "SNR" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "訊雜比"
+          }
+        }
+      }
+    },
+    "Sampling rate" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取樣頻率"
+          }
+        }
+      }
+    },
+    "Save" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "儲存"
+          }
+        }
+      }
+    },
+    "Saved %@ packets to %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已將 %1$@ 個封包儲存到 %2$@"
+          }
+        }
+      }
+    },
+    "Scan" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "掃描"
+          }
+        }
+      }
+    },
+    "Scan Failed" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "掃描失敗"
+          }
+        }
+      }
+    },
+    "Scan again on an interval while this page is open" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在此頁面開啟時定期重新掃描"
+          }
+        }
+      }
+    },
+    "Scanning…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在掃描⋯"
+          }
+        }
+      }
+    },
+    "Script" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "腳本"
+          }
+        }
+      }
+    },
+    "Scripts" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "腳本"
+          }
+        }
+      }
+    },
+    "Security" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安全性"
+          }
+        }
+      }
+    },
+    "Seeing traffic means reading packets, which macOS allows only as root. WiFiDetect installs a small helper that does just that, and nothing else." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "要看到流量就得讀取封包，而 macOS 只允許 root 這麼做。WiFiDetect 會安裝一個小型輔助程式，只做這件事，不做其他事。"
+          }
+        }
+      }
+    },
+    "Send to" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "傳送至"
+          }
+        }
+      }
+    },
+    "Sending this Mac's web traffic through the proxy means changing its network settings, which macOS allows only as root. WiFiDetect installs a small helper that does that, and puts them back when WiFiDetect quits." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "要讓這台 Mac 的網頁流量經過代理伺服器，就得更改它的網路設定，而 macOS 只允許 root 這麼做。WiFiDetect 會安裝一個小型輔助程式來處理，並在 WiFiDetect 結束時還原設定。"
+          }
+        }
+      }
+    },
+    "Sent" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已傳送"
+          }
+        }
+      }
+    },
+    "Series" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "數列"
+          }
+        }
+      }
+    },
+    "Service" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "服務"
+          }
+        }
+      }
+    },
+    "Services" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "服務"
+          }
+        }
+      }
+    },
+    "Share readings with iPhone and iPad" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "與 iPhone 和 iPad 分享讀數"
+          }
+        }
+      }
+    },
+    "Show" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示"
+          }
+        }
+      }
+    },
+    "Show Network Names" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示網路名稱"
+          }
+        }
+      }
+    },
+    "Show all" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示全部"
+          }
+        }
+      }
+    },
+    "Show in Finder" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 Finder 中顯示"
+          }
+        }
+      }
+    },
+    "Show in menu bar" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在選單列中顯示"
+          }
+        }
+      }
+    },
+    "Show less" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示較少"
+          }
+        }
+      }
+    },
+    "Showing %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在顯示 %@"
+          }
+        }
+      }
+    },
+    "Shown decoded. Edited, it goes on unencoded." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以解碼後的內容顯示。編輯後會以未編碼的形式送出。"
+          }
+        }
+      }
+    },
+    "Signal" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "訊號"
+          }
+        }
+      }
+    },
+    "Signal and noise (dBm)" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "訊號與雜訊（dBm）"
+          }
+        }
+      }
+    },
+    "Signal grades" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "訊號等級"
+          }
+        }
+      }
+    },
+    "Signal-to-noise ratio" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "訊雜比"
+          }
+        }
+      }
+    },
+    "Signal-to-noise ratio (dB)" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "訊雜比（dB）"
+          }
+        }
+      }
+    },
+    "Size" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大小"
+          }
+        }
+      }
+    },
+    "Slows everything through the proxy as a poor network would: downloads and uploads to these rates, shared by all connections, 0 for no limit; and every round trip by the latency, half each way. The presets are Chrome DevTools'. Packets aren't dropped, and Map Local answers come back at full speed." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "像不佳的網路一樣，減慢所有經過代理伺服器的流量：下載與上傳限制在這些速率（所有連線共用，0 表示不限制），每次往返再加上延遲（去回各一半）。預設組合取自 Chrome DevTools。封包不會被丟棄，Map Local 的回應會以全速傳回。"
+          }
+        }
+      }
+    },
+    "Source" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "來源"
+          }
+        }
+      }
+    },
+    "Star a connection in Connections to add its host: its domain, or its address when it has none." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在「連線」中為連線加上星號，即可加入它的主機：網域，沒有網域時則為位址。"
+          }
+        }
+      }
+    },
+    "Start Capture" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開始擷取"
+          }
+        }
+      }
+    },
+    "Start Proxy" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "啟動代理伺服器"
+          }
+        }
+      }
+    },
+    "Start the proxy to send this Mac's web traffic through WiFiDetect." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "啟動代理伺服器，讓這台 Mac 的網頁流量經過 WiFiDetect。"
+          }
+        }
+      }
+    },
+    "Started" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開始時間"
+          }
+        }
+      }
+    },
+    "Starting to capture %@…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在開始擷取 %@⋯"
+          }
+        }
+      }
+    },
+    "Status" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "狀態"
+          }
+        }
+      }
+    },
+    "Stop Capture" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "停止擷取"
+          }
+        }
+      }
+    },
+    "Stop Proxy" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "停止代理伺服器"
+          }
+        }
+      }
+    },
+    "Stop Recording" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "停止錄製"
+          }
+        }
+      }
+    },
+    "Text" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文字"
+          }
+        }
+      }
+    },
+    "The CA certificate is malformed" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CA 憑證格式不正確"
+          }
+        }
+      }
+    },
+    "The Mac sent more than expected." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 傳來的資料超出預期。"
+          }
+        }
+      }
+    },
+    "The WiFiDetect app on an iPhone or iPad on the same network can then show this Mac's signal chart. So can anyone else on the network: signal, noise, channel and tx rate, never the network's name." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如此一來，同一網路上 iPhone 或 iPad 的 WiFiDetect App 就能顯示這台 Mac 的訊號圖表。網路上的其他人也能看到：訊號、雜訊、頻道與傳輸速率，絕不包含網路名稱。"
+          }
+        }
+      }
+    },
+    "The body is text, or null to send it as it came." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "body 必須是文字，或用 null 表示照原樣送出。"
+          }
+        }
+      }
+    },
+    "The client cancelled the request." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用戶端取消了請求。"
+          }
+        }
+      }
+    },
+    "The client closed the connection." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用戶端關閉了連線。"
+          }
+        }
+      }
+    },
+    "The flow collector is off." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "流量收集器已關閉。"
+          }
+        }
+      }
+    },
+    "The helper didn't answer within 10 seconds, so macOS probably can't start it, as happens after switching to another build of WiFiDetect. In Settings › Helper, uninstall it and install it again. If it still doesn't answer, restart the Mac." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "輔助程式在 10 秒內沒有回應，macOS 可能無法啟動它，換成另一個 WiFiDetect 版本後常會這樣。請在「設定 › 輔助程式」中將它解除安裝後重新安裝。若仍沒有回應，請重新啟動 Mac。"
+          }
+        }
+      }
+    },
+    "The helper stopped unexpectedly and couldn't put the proxy settings back: %@ Check System Settings › Network › Proxies." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "輔助程式意外停止，且無法還原代理伺服器設定：%@ 請檢查「系統設定 › 網路 › 代理伺服器」。"
+          }
+        }
+      }
+    },
+    "The helper stopped unexpectedly, so the proxy is off. Start it again." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "輔助程式意外停止，代理伺服器已關閉。請重新啟動。"
+          }
+        }
+      }
+    },
+    "The helper stopped unexpectedly. Start the capture again." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "輔助程式意外停止。請重新開始擷取。"
+          }
+        }
+      }
+    },
+    "The method can't be empty or have spaces." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "方法不能是空的，也不能包含空格。"
+          }
+        }
+      }
+    },
+    "The method is text without spaces." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "method 必須是不含空格的文字。"
+          }
+        }
+      }
+    },
+    "The oldest %@ messages weren't kept." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最舊的 %@ 則訊息沒有保留。"
+          }
+        }
+      }
+    },
+    "The path is text that starts with / and has no spaces." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "path 必須是以 / 開頭、不含空格的文字。"
+          }
+        }
+      }
+    },
+    "The path starts with / and has no spaces." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "路徑必須以 / 開頭，且不能包含空格。"
+          }
+        }
+      }
+    },
+    "The proxy couldn't load the system's root certificates: %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理伺服器無法載入系統的根憑證：%@"
+          }
+        }
+      }
+    },
+    "The script has no onRequest function, so the request went on as it came." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "腳本沒有 onRequest 函式，因此請求照原樣送出。"
+          }
+        }
+      }
+    },
+    "The script has no onResponse function, so the response went on as it came." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "腳本沒有 onResponse 函式，因此回應照原樣送出。"
+          }
+        }
+      }
+    },
+    "The server closed the connection before the response ended." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "伺服器在回應結束前關閉了連線。"
+          }
+        }
+      }
+    },
+    "The server closed the connection during the TLS handshake." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "伺服器在 TLS 交握期間關閉了連線。"
+          }
+        }
+      }
+    },
+    "The server didn't answer within %lld seconds." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "伺服器在 %lld 秒內沒有回應。"
+          }
+        }
+      }
+    },
+    "The status is a number from 100 to 599." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "狀態碼必須是 100 到 599 之間的數字。"
+          }
+        }
+      }
+    },
+    "The status is a whole number from 100 to 599." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "status 必須是 100 到 599 之間的整數。"
+          }
+        }
+      }
+    },
+    "This Mac" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這台 Mac"
+          }
+        }
+      }
+    },
+    "This Mac's settings or its management profile don't allow the extension." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這台 Mac 的設定或其管理描述檔不允許此延伸功能。"
+          }
+        }
+      }
+    },
+    "This build of WiFiDetect doesn't include its network extension, which comes with the Developer ID build; connections are named from the socket table alone." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此版本的 WiFiDetect 未包含網路延伸功能（Developer ID 版本才有）；連線只會依 socket 表辨識。"
+          }
+        }
+      }
+    },
+    "This build of WiFiDetect doesn't include its network extension, which comes with the Developer ID build; only apps that use the system proxy reach WiFiDetect." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此版本的 WiFiDetect 未包含網路延伸功能（Developer ID 版本才有）；只有使用系統代理伺服器的 App 會經過 WiFiDetect。"
+          }
+        }
+      }
+    },
+    "This is a proxy: send it requests with absolute URLs." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這是代理伺服器：請以絕對 URL 傳送請求。"
+          }
+        }
+      }
+    },
+    "Throttle" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "限速"
+          }
+        }
+      }
+    },
+    "Throttled: %@ down, %@ up, %lld ms added to each round trip." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已限速：下載 %1$@、上傳 %2$@，每次往返增加 %3$lld 毫秒。"
+          }
+        }
+      }
+    },
+    "Throughput (bytes per second)" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "傳輸量（每秒位元組數）"
+          }
+        }
+      }
+    },
+    "Time" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時間"
+          }
+        }
+      }
+    },
+    "Time window" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時間範圍"
+          }
+        }
+      }
+    },
+    "To read HTTPS, WiFiDetect makes a certificate authority of its own on this Mac and asks macOS to trust it. Its private key stays in your keychain and never leaves it. Remove it when you're done debugging." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "為了讀取 HTTPS，WiFiDetect 會在這台 Mac 上製作自己的憑證授權單位，並請 macOS 信任它。它的私密金鑰保存在你的鑰匙圈中，永遠不會離開。除錯完成後請將它移除。"
+          }
+        }
+      }
+    },
+    "Traffic" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "流量"
+          }
+        }
+      }
+    },
+    "Traffic stays above a limit" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "流量持續超過上限"
+          }
+        }
+      }
+    },
+    "Trusted" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已信任"
+          }
+        }
+      }
+    },
+    "Trust…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "信任⋯"
+          }
+        }
+      }
+    },
+    "Tunnel" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通道"
+          }
+        }
+      }
+    },
+    "Turn It On in Settings…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在設定中開啟⋯"
+          }
+        }
+      }
+    },
+    "Turn Off" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "關閉"
+          }
+        }
+      }
+    },
+    "Tx power" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "傳輸功率"
+          }
+        }
+      }
+    },
+    "Tx rate" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "傳輸速率"
+          }
+        }
+      }
+    },
+    "UDP port" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "UDP 連接埠"
+          }
+        }
+      }
+    },
+    "URL pattern" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL 樣式"
+          }
+        }
+      }
+    },
+    "URL, method or status" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL、方法或狀態"
+          }
+        }
+      }
+    },
+    "Uninstall" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "解除安裝"
+          }
+        }
+      }
+    },
+    "Unknown" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未知"
+          }
+        }
+      }
+    },
+    "Unknown (%lld)" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未知（%lld）"
+          }
+        }
+      }
+    },
+    "Unknown band" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未知頻段"
+          }
+        }
+      }
+    },
+    "Updating to this version…" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在更新為此版本⋯"
+          }
+        }
+      }
+    },
+    "Upload" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上傳"
+          }
+        }
+      }
+    },
+    "Upload (kbit/s)" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上傳（kbit/s）"
+          }
+        }
+      }
+    },
+    "Value" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "數值"
+          }
+        }
+      }
+    },
+    "Version" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "版本"
+          }
+        }
+      }
+    },
+    "Very poor" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "極差"
+          }
+        }
+      }
+    },
+    "VoIP and streaming" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoIP 與串流"
+          }
+        }
+      }
+    },
+    "Voice grade" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "語音等級"
+          }
+        }
+      }
+    },
+    "Voice grade from" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「語音等級」的最低值"
+          }
+        }
+      }
+    },
+    "WPA Enterprise" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WPA 企業級"
+          }
+        }
+      }
+    },
+    "WPA Personal" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WPA 個人級"
+          }
+        }
+      }
+    },
+    "WPA/WPA2 Enterprise" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WPA/WPA2 企業級"
+          }
+        }
+      }
+    },
+    "WPA/WPA2 Personal" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WPA/WPA2 個人級"
+          }
+        }
+      }
+    },
+    "WPA2 Enterprise" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WPA2 企業級"
+          }
+        }
+      }
+    },
+    "WPA2 Personal" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WPA2 個人級"
+          }
+        }
+      }
+    },
+    "WPA2/WPA3 Personal" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WPA2/WPA3 個人級"
+          }
+        }
+      }
+    },
+    "WPA3 Enterprise" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WPA3 企業級"
+          }
+        }
+      }
+    },
+    "WPA3 Personal" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WPA3 個人級"
+          }
+        }
+      }
+    },
+    "Waiting for Requests" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在等待請求"
+          }
+        }
+      }
+    },
+    "Waiting for Traffic" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在等待流量"
+          }
+        }
+      }
+    },
+    "Waiting for approval in Login Items" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在等待於登入項目中核准"
+          }
+        }
+      }
+    },
+    "Waiting for you to allow it in System Settings › General › Login Items & Extensions › Network Extensions" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "等待你在「系統設定 › 一般 › 登入項目與延伸功能 › 網路延伸功能」中允許"
+          }
+        }
+      }
+    },
+    "Weaker than Poor is Very poor. The Good line is also drawn on the chart as the VoIP and streaming minimum. Chipsets scale RSSI differently, so treat these as guidance." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "比「差」更弱即為「極差」。「良好」的最低值也會畫在圖表上，作為 VoIP 與串流的最低要求。不同晶片組的 RSSI 刻度不同，這些數值僅供參考。"
+          }
+        }
+      }
+    },
+    "Where a Mac starts looking for a stronger access point." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 開始尋找訊號更強的無線基地台的位置。"
+          }
+        }
+      }
+    },
+    "While the proxy runs, these apps' HTTPS goes to it even if they don't use the system proxy, as curl --noproxy and many Go, Python and Java programs don't. Helpers inside an app come with it. Their QUIC is refused so they fall back to TCP; plain HTTP on port 80 isn't captured. If WiFiDetect quits or its proxy stops answering, they connect directly again. WiFiDetect itself is never captured." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理伺服器執行時，這些 App 的 HTTPS 即使不使用系統代理伺服器也會送往它，例如 curl --noproxy 以及許多 Go、Python、Java 程式。App 內的輔助程式也會一併擷取。它們的 QUIC 會被拒絕，因而改用 TCP；連接埠 80 上的純 HTTP 不會被擷取。若 WiFiDetect 結束或其代理伺服器停止回應，它們會恢復直接連線。WiFiDetect 本身永遠不會被擷取。"
+          }
+        }
+      }
+    },
+    "Wi-Fi" : {
+      "shouldTranslate" : false
+    },
+    "Wi-Fi is off" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wi-Fi 已關閉"
+          }
+        }
+      }
+    },
+    "WiFiDetect" : {
+      "shouldTranslate" : false
+    },
+    "Width" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "頻寬"
+          }
+        }
+      }
+    },
+    "Your network" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的網路"
+          }
+        }
+      }
+    },
+    "Zero" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "零"
+          }
+        }
+      }
+    },
+    "^[%lld request](inflect: true) waiting at a breakpoint for you to send on or abort in the inspector." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 個請求正在中斷點等待，請在檢閱器中繼續送出或中止。"
+          }
+        }
+      }
+    },
+    "a value" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一個值"
+          }
+        }
+      }
+    },
+    "dBm" : {
+      "shouldTranslate" : false
+    },
+    "headers is a list of [name, value] pairs." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "headers 必須是 [name, value] 配對的列表。"
+          }
+        }
+      }
+    },
+    "http://localhost:3000" : {
+      "shouldTranslate" : false
+    },
+    "https://api.example.com/*" : {
+      "shouldTranslate" : false
+    },
+    "https://api.example.com/v1/*" : {
+      "shouldTranslate" : false
+    },
+    "https://api.example.com/v1/users*" : {
+      "shouldTranslate" : false
+    },
+    "last heard %@, %@ records" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最後收到於 %1$@，%2$@ 筆紀錄"
+          }
+        }
+      }
+    },
+    "link type %d" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "連結類型 %d"
+          }
+        }
+      }
+    },
+    "macOS blocked local network access. Allow WiFiDetect in System Settings › Privacy & Security › Local Network, then turn sharing off and on." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 封鎖了區域網路存取。請在「系統設定 › 隱私權與安全性 › 區域網路」中允許 WiFiDetect，然後關閉再重新開啟分享。"
+          }
+        }
+      }
+    },
+    "macOS is set not to show WiFiDetect's notifications. Allow them in System Settings › Notifications › WiFiDetect." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 目前設定為不顯示 WiFiDetect 的通知。請在「系統設定 › 通知 › WiFiDetect」中允許。"
+          }
+        }
+      }
+    },
+    "macOS shows network names and BSSIDs only to apps with location access. WiFiDetect doesn't use where you are." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 只會向有定位權限的 App 顯示網路名稱與 BSSID。WiFiDetect 不會使用你的所在位置。"
+          }
+        }
+      }
+    },
+    "macOS still doesn't trust the certificate. Check it in Keychain Access." : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 仍未信任此憑證。請在「鑰匙圈存取」中檢查。"
+          }
+        }
+      }
+    },
+    "no limit" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不限制"
+          }
+        }
+      }
+    },
+    "the capturing machine" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "擷取端機器"
+          }
+        }
+      }
+    },
+    "this Mac" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這台 Mac"
+          }
+        }
+      }
+    },
+    "—" : {
+      "shouldTranslate" : false
+    },
+    "… %@ more" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⋯還有 %@"
+          }
+        }
+      }
+    },
+    "…and %lld more" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⋯以及另外 %lld 行"
+          }
+        }
+      }
+    },
+    "★" : {
+      "shouldTranslate" : false
+    }
+  },
+  "version" : "1.0"
+}

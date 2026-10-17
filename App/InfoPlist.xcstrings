@@ -1,0 +1,26 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "NSLocalNetworkUsageDescription" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WiFiDetect 會與你 iPhone 或 iPad 上的 WiFiDetect App 分享這台 Mac 的 Wi-Fi 讀數，並在你開啟時接收路由器的流量紀錄。"
+          }
+        }
+      }
+    },
+    "NSLocationUsageDescription" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WiFiDetect 只會使用你的位置來讀取 Wi-Fi 網路的名稱（SSID）與無線基地台（BSSID）。macOS 會對沒有定位權限的 App 隱藏這些資訊。"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

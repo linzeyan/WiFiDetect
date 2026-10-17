@@ -1,0 +1,16 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "NSSystemExtensionUsageDescription" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WiFiDetect 的網路延伸功能會辨識每個連線背後的 App，並將你所選 App 的 HTTPS 送往 WiFiDetect 的代理伺服器。它從不封鎖任何東西。"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

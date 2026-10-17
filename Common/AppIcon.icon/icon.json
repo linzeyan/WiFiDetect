@@ -1,0 +1,65 @@
+{
+  "fill": {
+    "linear-gradient": [
+      "extended-srgb:0.18431,0.52549,1.00000,1.00000",
+      "extended-srgb:0.04314,0.18431,0.49412,1.00000"
+    ],
+    "orientation": {
+      "start": {
+        "x": 0.19531,
+        "y": 0
+      },
+      "stop": {
+        "x": 0.80469,
+        "y": 1
+      }
+    }
+  },
+  "groups": [
+    {
+      "layers": [
+        {
+          "image-name": "wifi.svg",
+          "name": "wifi",
+          "fill-specializations": [
+            {
+              "appearance": "dark",
+              "value": {
+                "solid": "extended-srgb:0.18431,0.52549,1.00000,1.00000"
+              }
+            }
+          ]
+        }
+      ],
+      "name": "Wi-Fi",
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.5
+      },
+      "translucency": {
+        "enabled": true,
+        "value": 0.5
+      }
+    },
+    {
+      "layers": [
+        {
+          "image-name": "line.svg",
+          "name": "line"
+        }
+      ],
+      "name": "Reading",
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.5
+      },
+      "translucency": {
+        "enabled": true,
+        "value": 0.5
+      }
+    }
+  ],
+  "supported-platforms": {
+    "squares": "shared"
+  }
+}

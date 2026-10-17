@@ -1,0 +1,289 @@
+name: WiFiDetect
+options:
+  bundleIdPrefix: com.zeyanlin
+  deploymentTarget:
+    macOS: "26.0"
+    # Not 26 like the Mac: the only test iPhone is an XR, which stops at iOS 18. The
+    # one iOS 26 API, link quality, is checked at runtime.
+    iOS: "18.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    # Developer ID distribution (docs/README.md D1, D5). Day to day the build is
+    # signed "Apple Development"; both certificates belong to this team, and the
+    # XPC code-signing requirements (Shared/HelperProtocol.swift) only pin the team,
+    # so the same requirement holds for development and release builds.
+    DEVELOPMENT_TEAM: NKJSLB6HBR
+    CODE_SIGN_STYLE: Automatic
+    CODE_SIGN_IDENTITY: Apple Development
+    # Required for notarization, and it is what lets the helper trust that the app
+    # talking to it has not had code injected into it.
+    ENABLE_HARDENED_RUNTIME: YES
+    # The interface is in Traditional Chinese and English. Strings in SwiftUI views and
+    # String(localized:) are extracted into each app's Localizable.xcstrings: English is
+    # the source, so a Mac or iPhone in any other language shows English. The usage
+    # descriptions below are translated in each target's InfoPlist.xcstrings.
+    SWIFT_EMIT_LOC_STRINGS: YES
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+
+# The HTTP(S) proxy (docs/architecture.md §4): NIO for the server and TLS with
+# in-memory per-host certificates, swift-certificates to issue them.
+packages:
+  swift-nio:
+    url: https://github.com/apple/swift-nio.git
+    from: 2.70.0
+  swift-nio-ssl:
+    url: https://github.com/apple/swift-nio-ssl.git
+    from: 2.27.0
+  # HTTP/2 with decrypted clients and their servers: HPACK, framing, flow control
+  # and stream state, which would be thousands of lines by hand.
+  swift-nio-http2:
+    url: https://github.com/apple/swift-nio-http2.git
+    from: 1.46.0
+  swift-certificates:
+    url: https://github.com/apple/swift-certificates.git
+    from: 1.5.0
+
+# The app as both builds have it. The everyday build (WiFiDetect) is the one `make
+# build` and the tests use; the Developer ID build (WiFiDetectDist, `make dist`) adds
+# the network extension and the entitlements that go with it, which a development
+# build can't carry onto a Mac whose device ID isn't in the team's profile.
+targetTemplates:
+  MacApp:
+    type: application
+    platform: macOS
+    sources:
+      - path: App
+      - path: Shared
+      # Also compiled into the iPhone companion.
+      - path: Common
+      # SMAppService.daemon(plistName:) looks the plist up here, and only here.
+      - path: Helper/com.zeyanlin.wifidetect.helper.plist
+        buildPhase:
+          copyFiles:
+            destination: wrapper
+            subpath: Contents/Library/LaunchDaemons
+      # The packages below are Apache 2.0, which asks a binary to carry the license and
+      # their NOTICE files; NOTICE.md also credits DB-IP (CC BY 4.0).
+      - path: LICENSE
+        buildPhase: resources
+      - path: NOTICE.md
+        buildPhase: resources
+    dependencies:
+      - package: swift-nio
+        products: [NIOCore, NIOPosix, NIOHTTP1, NIOTLS]
+      - package: swift-nio-ssl
+        products: [NIOSSL]
+      - package: swift-nio-http2
+        products: [NIOHTTP2]
+      - package: swift-certificates
+        products: [X509]
+      # Opening capture files (pcap_open_offline) needs no root, so the app links it too.
+      - sdk: libpcap.tbd
+      # audit_token_to_pid, for Shared/ExtensionProtocol.swift.
+      - sdk: libbsm.tbd
+      - target: wifidetect-helper
+        embed: true
+        # Already signed by its own target with its own identifier; re-signing on
+        # copy would be one more way for the identifier the app pins to drift.
+        codeSign: false
+        copy:
+          destination: executables
+    info:
+      path: App/Info.plist
+      properties:
+        # Without these xcodegen writes 1.0 (1), whatever `make release` tags the build.
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        # macOS 14+ redacts SSID/BSSID unless the app holds Location authorization;
+        # RSSI, noise and channel need none (docs/research/wifi-signal-apis.md Q7).
+        NSLocationUsageDescription: WiFiDetect uses your location only to read the name (SSID) and access point (BSSID) of Wi-Fi networks. macOS hides them from apps without location access.
+        # Only asked for when sharing with the iPhone is turned on (TN3179), and perhaps
+        # when the router flow collector starts listening on every interface.
+        NSLocalNetworkUsageDescription: WiFiDetect shares this Mac's Wi-Fi readings with the WiFiDetect app on your iPhone or iPad, and receives flow records from your router when you turn that on.
+        NSBonjourServices: [_wifidetect._tcp]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.zeyanlin.wifidetect
+        PRODUCT_NAME: WiFiDetect
+        # pcap.h again: the SDK has no Clang module for it.
+        SWIFT_OBJC_BRIDGING_HEADER: App/WiFiDetect-Bridging-Header.h
+
+targets:
+  WiFiDetect:
+    templates: [MacApp]
+    entitlements:
+      path: App/WiFiDetect.entitlements
+      properties:
+        # Hardened runtime blocks Location unless this is declared.
+        com.apple.security.personal-information.location: true
+
+  # Built only by `make dist`, which signs it with Developer ID and notarizes it. Same
+  # app, same identifier, plus the network extension.
+  WiFiDetectDist:
+    templates: [MacApp]
+    dependencies:
+      - target: wifidetect-extension
+        embed: true
+    entitlements:
+      path: App/WiFiDetectDist.entitlements
+      properties:
+        com.apple.security.personal-information.location: true
+        com.apple.developer.system-extension.install: true
+        # The Developer ID spelling: `make dist` signs the archive with Developer ID
+        # already, since a development profile would need a registered Mac.
+        com.apple.developer.networking.networkextension: [content-filter-provider-systemextension, app-proxy-provider-systemextension]
+
+  # The network extension (architecture §3, Network extension): a content filter that names each new
+  # connection's app, and a transparent proxy for apps that ignore the system proxy.
+  # Network Extension requires it sandboxed; it runs as root regardless.
+  wifidetect-extension:
+    type: system-extension
+    platform: macOS
+    sources:
+      - path: Extension
+        excludes:
+          - "*.plist"
+          - "*.entitlements"
+      - path: Shared
+    dependencies:
+      - sdk: libbsm.tbd
+    info:
+      path: Extension/Info.plist
+      properties:
+        CFBundlePackageType: SYSX
+        # macOS replaces an installed extension only when a version differs, so `make
+        # dist` stamps each build's (CURRENT_PROJECT_VERSION) with the time.
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSSystemExtensionUsageDescription: WiFiDetect's network extension names the app behind each connection, and sends the HTTPS of apps you choose to WiFiDetect's proxy. It never blocks anything.
+        NetworkExtension:
+          # Under the app group below, as Network Extension requires.
+          NEMachServiceName: $(TeamIdentifierPrefix)com.zeyanlin.wifidetect.extension
+          NEProviderClasses:
+            com.apple.networkextension.filter-data: $(PRODUCT_MODULE_NAME).FilterDataProvider
+            com.apple.networkextension.app-proxy: $(PRODUCT_MODULE_NAME).TransparentProxyProvider
+    entitlements:
+      path: Extension/Extension.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.application-groups: [$(TeamIdentifierPrefix)com.zeyanlin.wifidetect]
+        # The relay's connections: to the app's proxy on 127.0.0.1, or to the server.
+        com.apple.security.network.client: true
+        com.apple.developer.networking.networkextension: [content-filter-provider-systemextension, app-proxy-provider-systemextension]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.zeyanlin.wifidetect.extension
+        # macOS finds a system extension by its bundle's name, which must be its identifier.
+        PRODUCT_NAME: com.zeyanlin.wifidetect.extension
+        PRODUCT_MODULE_NAME: WiFiDetectExtension
+        SKIP_INSTALL: YES
+
+  # Root launchd daemon, installed by the app through SMAppService. It does only
+  # what needs root: open BPF devices, and (Phase 3) rewrite the system proxy.
+  wifidetect-helper:
+    type: tool
+    platform: macOS
+    sources:
+      - path: Helper
+        excludes:
+          - "*.plist"
+          - "*.h"
+      - path: Shared
+        # The app and the extension's, not root's: TLS parsing included.
+        excludes:
+          - ExtensionProtocol.swift
+          - TLS.swift
+    dependencies:
+      - sdk: libpcap.tbd
+    settings:
+      base:
+        PRODUCT_NAME: wifidetect-helper
+        # Becomes the code-signing identifier the app pins. A tool has no bundle, so
+        # without an embedded Info.plist Xcode would sign it as "wifidetect-helper".
+        PRODUCT_BUNDLE_IDENTIFIER: com.zeyanlin.wifidetect.helper
+        GENERATE_INFOPLIST_FILE: YES
+        CREATE_INFOPLIST_SECTION_IN_BINARY: YES
+        # The macOS SDK ships pcap.h but no Clang module for it.
+        SWIFT_OBJC_BRIDGING_HEADER: Helper/Helper-Bridging-Header.h
+        SKIP_INSTALL: YES
+
+  # iPhone and iPad companion (docs/spec.md F4): the Mac's chart over Bonjour, and the
+  # device's own link rating and round trips.
+  WiFiDetectCompanion:
+    type: application
+    platform: iOS
+    sources:
+      - path: iOS
+      - path: Common
+    info:
+      path: iOS/Info.plist
+      properties:
+        CFBundleDisplayName: WiFiDetect
+        # The App Store version, apart from MARKETING_VERSION, which numbers the Mac app's
+        # GitHub releases.
+        CFBundleShortVersionString: "1.0.0"
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+        # All four, or iPadOS won't run the app in Split View and Stage Manager.
+        UISupportedInterfaceOrientations~ipad: [UIInterfaceOrientationPortrait, UIInterfaceOrientationPortraitUpsideDown, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+        # The app encrypts nothing itself (plain TCP to the Mac, ICMP), so every upload
+        # would otherwise stop to ask about export compliance.
+        ITSAppUsesNonExemptEncryption: false
+        # TN3179: without both, browsing fails without ever asking.
+        NSLocalNetworkUsageDescription: WiFiDetect finds your Mac on this network to show its Wi-Fi readings, and times round trips to your router.
+        NSBonjourServices: [_wifidetect._tcp]
+        NSLocationWhenInUseUsageDescription: WiFiDetect uses your location only to read the name of the Wi-Fi network. iOS hides it from apps without location access.
+    entitlements:
+      path: iOS/WiFiDetectCompanion.entitlements
+      properties:
+        # NEHotspotNetwork.fetchCurrent returns nil without it (spec F4.3).
+        com.apple.developer.networking.wifi-info: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.zeyanlin.wifidetect.companion
+        TARGETED_DEVICE_FAMILY: "1,2"
+
+  WiFiDetectTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: Tests
+      # The iPhone's ping code is plain Darwin, so the Mac tests cover it too.
+      - path: iOS/Ping.swift
+    dependencies:
+      - target: WiFiDetect
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+
+schemes:
+  WiFiDetect:
+    build:
+      targets:
+        WiFiDetect: all
+        WiFiDetectTests: [test]
+    test:
+      targets:
+        - WiFiDetectTests
+      # The tests check the English messages; on a Mac set to Chinese the app would
+      # otherwise answer in Chinese.
+      language: en
+    run:
+      config: Debug
+  WiFiDetectCompanion:
+    build:
+      targets:
+        WiFiDetectCompanion: all
+    run:
+      config: Debug
+  # `make dist` only.
+  WiFiDetectDist:
+    build:
+      targets:
+        WiFiDetectDist: all
+    archive:
+      config: Release
