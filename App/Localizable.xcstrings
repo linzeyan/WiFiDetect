@@ -3987,6 +3987,16 @@
         }
       }
     },
+    "Starting to capture %@: %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在開始擷取 %1$@：%2$@"
+          }
+        }
+      }
+    },
     "Starting to capture %@…" : {
       "localizations" : {
         "zh-Hant" : {

@@ -37,6 +37,10 @@ final class NetworkExtensionClient: NSObject {
     private(set) var capture = CaptureSettings()
     /// The transparent proxy's own state, which lags `capture` while it starts.
     private(set) var captureStatus = NEVPNStatus.invalid
+    /// From capture being asked for until the transparent proxy is told to start: the
+    /// extension may first need installing, and the user allowing it, which takes
+    /// as long as the user does.
+    private(set) var isStartingCapture = false
     private(set) var error: String?
     /// The content filter's reports, on the main actor.
     @ObservationIgnored var onReports: ([FlowReport]) -> Void = { _ in }
@@ -116,6 +120,8 @@ final class NetworkExtensionClient: NSObject {
         capture = CaptureSettings(port: port, apps: apps)
         renew()
         guard !running else { return }
+        isStartingCapture = true
+        defer { isStartingCapture = false }
         error = nil
         guard await activate() else {
             capture = CaptureSettings()

@@ -101,7 +101,7 @@ private struct ExportersBar: View {
             } else if store.exporters.isEmpty, let port = store.listening {
                 // This Mac's own network addresses: what the router's export setting asks for.
                 let addresses = localAddresses().filter { $0.isV4 && $0.scope == .privateNetwork }.sorted().map(\.description)
-                Text("Listening for NetFlow v9 and IPFIX on UDP port \(String(port)). Set your router to export flows to \(addresses.isEmpty ? String(localized: "this Mac") : addresses.formatted(.list(type: .or))), port \(String(port)).")
+                Text("Listening for NetFlow v9 and IPFIX on UDP port \(String(port)). Set your router to export flows to \(addresses.isEmpty ? String(localized: "this Mac") : addresses.formattedList(.or)), port \(String(port)).")
             }
             ForEach(store.exporters) { exporter in
                 HStack(spacing: 8) {

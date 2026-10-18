@@ -239,7 +239,7 @@ struct ProxyBar: View {
 
     private var decryptSummary: String {
         let hosts = proxy.decryptHosts.filter { !$0.trimmingCharacters(in: .whitespaces).isEmpty }
-        return hosts.isEmpty ? String(localized: "Decrypting no HTTPS hosts yet.") : String(localized: "Decrypting HTTPS for \(hosts.formatted(.list(type: .and))).")
+        return hosts.isEmpty ? String(localized: "Decrypting no HTTPS hosts yet.") : String(localized: "Decrypting HTTPS for \(hosts.formattedList(.and)).")
     }
 
     private static func rate(_ kbps: Int) -> String {
@@ -247,10 +247,16 @@ struct ProxyBar: View {
     }
 
     private var captureSummary: String {
-        let names = proxy.capture.apps.map { URL(filePath: $0).deletingPathExtension().lastPathComponent }.formatted(.list(type: .and))
+        let names = proxy.capture.apps.map { URL(filePath: $0).deletingPathExtension().lastPathComponent }.formattedList(.and)
         let network = proxy.network
         guard network.capture.port != 0 else {
             return String(localized: "Not capturing \(names): \(network.error ?? network.status.label)")
+        }
+        // Until the transparent proxy starts, its status is the last run's, if any.
+        if network.isStartingCapture {
+            return network.status == .needsApproval
+                ? String(localized: "Starting to capture \(names): \(network.status.label)")
+                : String(localized: "Starting to capture \(names)…")
         }
         return switch network.captureStatus {
         case .connected: proxy.capture.apps.count == 1

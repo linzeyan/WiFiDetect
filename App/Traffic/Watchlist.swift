@@ -329,7 +329,7 @@ final class Watchlist {
 
     private func list(_ names: [String]) -> String {
         let shown = names.count > 3 ? Array(names.prefix(3)) + [String(localized: "\(names.count - 3) more")] : names
-        return shown.formatted(.list(type: .and))
+        return shown.formattedList(.and)
     }
 
     private func post(_ kind: String, title: String, body: String) {
